@@ -6,7 +6,7 @@ import "./PopUp.css";
 function PopUp({ notes, togglePopup }) {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
-  const apiUrl = "http://localhost:2029/api";
+  const apiUrl = "/api"; // Use relative path for API, let Nginx handle proxy
 
   const saveNote = () => {
     if (title.trim() !== "" && details.trim() !== "") {

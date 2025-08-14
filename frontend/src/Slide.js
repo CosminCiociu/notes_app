@@ -10,7 +10,7 @@ function Slide({ toggleSlide, note, deleteNote }) {
   const [title, setTitle] = useState("");
 
   const [details, setDetails] = useState("");
-  const apiUrl = "http://localhost:2029/api";
+  const apiUrl = "/api"; // Use relative path for API, let Nginx handle proxy
 
   const handleUpdate = (item) => {
     setNoteId(item._id);
