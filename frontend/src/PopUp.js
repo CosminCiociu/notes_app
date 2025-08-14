@@ -6,7 +6,7 @@ import "./PopUp.css";
 function PopUp({ notes, togglePopup }) {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
-  const apiUrl = "http://localhost:2029";
+  const apiUrl = "https://ciociu-cosmin.eu:2029";
 
   const saveNote = () => {
     if (title.trim() !== "" && details.trim() !== "") {
