@@ -10,7 +10,7 @@ function Slide({ toggleSlide, note, deleteNote }) {
   const [title, setTitle] = useState("");
 
   const [details, setDetails] = useState("");
-  const apiUrl = "https://ciociu-cosmin.eu:2029";
+  const apiUrl = "https://localhost:2029";
 
   const handleUpdate = (item) => {
     setNoteId(item._id);
