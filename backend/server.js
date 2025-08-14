@@ -95,8 +95,9 @@ app.delete("/api/home/:id", async (req, res) => {
 
 // HTTPS options
 const httpsOptions = {
-  key: fs.readFileSync("/path/to/server.key"), // Replace with your key path
-  cert: fs.readFileSync("/path/to/server.cert"), // Replace with your cert path
+  key: fs.readFileSync("/etc/letsencrypt/live/ciociu-cosmin.eu/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/ciociu-cosmin.eu/fullchain.pem"),
+  dhparam: fs.readFileSync("/etc/letsencrypt/ssl-dhparams.pem"),
 };
 
 // Start HTTPS server
