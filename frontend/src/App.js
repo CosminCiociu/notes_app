@@ -9,7 +9,7 @@ function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [showSlide, setShowSlide] = useState(false);
   const [selectedNote, setSelectedNote] = useState(null);
-  const apiUrl = "http://localhost:2029/api"; // Your API base URL
+  const apiUrl = "http://ciociu-cosmin.eu:2029/api"; // Your API base URL
 
   // Fetch notes when the component mounts
   useEffect(() => {
