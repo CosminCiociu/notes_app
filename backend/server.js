@@ -3,6 +3,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const https = require("https");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -91,7 +92,14 @@ app.delete("/api/home/:id", async (req, res) => {
   }
 });
 
+// HTTPS options
+const httpsOptions = {
+  key: fs.readFileSync("/path/to/server.key"), // Replace with your key path
+  cert: fs.readFileSync("/path/to/server.cert"), // Replace with your cert path
+};
+
+// Start HTTPS server
 const PORT = 2029;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+https.createServer(httpsOptions, app).listen(PORT, () => {
+  console.log(`HTTPS Server running on port ${PORT}`);
 });
